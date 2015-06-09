@@ -1,0 +1,8 @@
+[user]
+	name = Patrick Gombert
+	email = patrickgombert@gmail.com
+[alias]
+	co = checkout
+	st = status
+	br = branch
+	amend = commit --amend --no-edit
