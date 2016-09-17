@@ -1,4 +1,4 @@
-source "/Users/patrickgombert/.git-completion"
+source "$HOME/.git-completion"
 
 export EDITOR=vim
 
