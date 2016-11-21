@@ -36,6 +36,7 @@ map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 map <silent> <LocalLeader>p :CtrlP<CR>
 map <silent> <LocalLeader>fp :CtrlPClearCache<CR>
+map Q <Nop>
 
 " very magic (which somehow means normal regexes)
 nnoremap / /\v
