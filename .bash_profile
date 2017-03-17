@@ -1,5 +1,7 @@
 source "$HOME/.git-completion"
 
+alias memuse="ps -o rss,command -waxc | sort -n"
+
 export EDITOR=vim
 
 export PROMPT_COMMAND='history -a'
