@@ -2,9 +2,10 @@ source "$HOME/.git-completion"
 
 alias memuse="ps -o rss,command -waxc | sort -n"
 
+export LESS=FRSXQ
 export EDITOR=vim
-
-export PROMPT_COMMAND='history -a'
+export TERM=xterm-256color
+export JAVA_HOME=/Library/Java/Home
 
 conditional_git_prompt() {
   git rev-parse --is-inside-work-tree &>/dev/null
@@ -20,4 +21,5 @@ conditional_git_prompt() {
   fi
 }
 
-PROMPT_COMMAND='PS1="\[\033[1;34m\]patrick $(conditional_git_prompt) \[\033[1;33m\]λ\[\033[0m\] "'
+bind -x '"\C-r": "HISTFILE=~/.bash_history.global hh"'
+PROMPT_COMMAND='history -a ~/.bash_history.global; PS1="\[\033[1;34m\]patrick $(conditional_git_prompt) \[\033[1;33m\]λ\[\033[0m\] "'
