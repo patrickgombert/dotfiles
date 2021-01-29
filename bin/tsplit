@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ ! -z "$1" ]; then
+  tmux rename-window $1
+fi
+tmux splitw -h -p 50
+tmux selectp -t 0
+tmux resize-pane -R 40
+vim

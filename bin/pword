@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+require 'digest'
+require 'io/console'
+
+begin
+  service = ARGV[0]
+  if ARGV[1] == "--length"
+    length = ARGV[2].to_i
+  else
+    length = 16
+  end
+  STDERR.print "Seed: "
+  seed = STDIN.noecho(&:gets)
+  STDERR.puts ""
+  puts Digest::SHA256.new.update(service + seed).hexdigest[0...length]
+  exit 0
+rescue Exception
+end
